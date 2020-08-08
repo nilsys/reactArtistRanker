@@ -3,11 +3,7 @@ import Reducer from './Reducer';
 
 //initial state
 const initialState = {
-  artists: [
-    { id: 1, name: 'Atrist One' },
-    { id: 2, name: 'Atrist Two' },
-    { id: 3, name: 'Atrist Three' },
-  ],
+  artists: [],
 };
 
 // Create Context
@@ -32,7 +28,7 @@ export const GlobalProvider = ({ children }) => {
     });
   };
 
-  const editArtist = (user) => {
+  const editArtist = (artist) => {
     dispatch({
       type: 'EDIT_ARTIST',
       payload: artist

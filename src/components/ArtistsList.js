@@ -11,15 +11,32 @@ export const ArtistsList = () => {
     <div>
       <h1> Artists List </h1>
       <ListGroup className="mt-4">
-      {artists.map( artist => (
-        <ListGroupItem className="d-flex">
-          <strong>{artist.name}</strong>
-          <div className="ml-auto">
-            <Link className="btn btn-warning mr-1" to={`/edit/${artist.id}`}>Edit</Link>
-            <Button onClick={()=> removeArtist(artist.id)} color="danger"> Delete</Button>
-          </div>
-        </ListGroupItem>
-      ))}
+        {artists.length > 0 ? (
+          <>
+            {artists.map((artist) => (
+              <ListGroupItem className="d-flex" key={artist.id}>
+                <strong>{artist.name}</strong>
+                <div className="ml-auto">
+                  <Link
+                    className="btn btn-warning mr-1"
+                    to={`/edit/${artist.id}`}
+                  >
+                    Edit
+                  </Link>
+                  <Button
+                    onClick={() => removeArtist(artist.id)}
+                    color="danger"
+                  >
+                    {' '}
+                    Delete
+                  </Button>
+                </div>
+              </ListGroupItem>
+            ))}
+          </>
+        ) : (
+          <h4>Artist list is empty</h4>
+        )}
       </ListGroup>
     </div>
   );
