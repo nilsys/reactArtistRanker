@@ -36,5 +36,50 @@ Label {
 /*-----------------------*/
 .counter {
   display: flex;
-  width: 190px;
+  width: 170px;
+}
+
+.counter-action {
+  margin-bottom: 10px;
+  border-radius: 30px;
+  width: 30px;
+  height: 50px;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #B0AEBA;
+  background-color: #DCDCDC;
+  display: block;
+  cursor: pointer;
+  outline: none;
+
+}
+
+.counter-action:hover {
+  color: #fff;
+}
+
+.increment:hover {
+  background: #83D97C;
+}
+
+.decrement:hover {
+  background: #EF5350;
+}
+
+.counter-score {
+  flex-grow: 1;
+  text-align: center;
+  font-family: monospace;
+}
+
+.counter-score p{
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.counter-score strong {
+  color: #581237;
+  font-size: 19px;
+  margin: 0;
 }

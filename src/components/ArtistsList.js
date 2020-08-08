@@ -18,7 +18,7 @@ export const ArtistsList = () => {
                   className="artist-img"
                   src={artist.picture}
                   alt="Artist picture"
-                  width="50"
+                  width="80"
                   height="auto"
                 ></img>
                 <strong className="artist-name">{artist.name}</strong>
@@ -35,7 +35,7 @@ export const ArtistsList = () => {
                     color="danger"
                   >
                     {' '}
-                    <i class="far fa-trash-alt"></i> Delete
+                    <i className="fas fa-user-minus"></i> Delete
                   </Button>
                 </div>
               </ListGroupItem>
