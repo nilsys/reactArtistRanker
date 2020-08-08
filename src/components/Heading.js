@@ -7,7 +7,7 @@ export const Heading = () => {
     <div>
       <Navbar color="dark" dark>
       <Container>
-        <NavbarBrand href="/"> Artists List Home</NavbarBrand>
+        <NavbarBrand className="second-nav" href="/"> the list of your favourite artists </NavbarBrand>
         <Nav>
           <NavItem>
             <Link className="btn btn-primary" to="/add"> Add Artist</Link>

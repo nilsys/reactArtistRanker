@@ -30,6 +30,7 @@ export const EditArtist = (props) => {
     setSelectedArtist({ ...selectedArtist, [e.target.name]: e.target.value });
   };
 
+
   return (
     <Form onSubmit={onSubmit}>
       <FormGroup>
@@ -41,6 +42,7 @@ export const EditArtist = (props) => {
           onChange={onChange}
           placeholder="Enter Artist Name"
         ></Input>
+
       </FormGroup>
       <Button type="submit">Edit Artist</Button>
       <Link to="/" className="btn btn-danger ml-2">

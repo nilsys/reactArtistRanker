@@ -5,6 +5,7 @@ import { Home } from './components/Home';
 import { AddArtist } from './components/AddArtist';
 import { EditArtist } from './components/EditArtist';
 import { GlobalProvider } from './store/GlobalState';
+import NavbarLinks from './components/NavbarLinks';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
       <GlobalProvider>
         <Router>
-          <h1>...Navbar goes here...</h1>
+        <NavbarLinks />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/add" component={AddArtist} />

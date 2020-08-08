@@ -1,10 +1,40 @@
 
 .App {
-  background-color: azure;
-  max-width: 30rem;
+  background: linear-gradient(110deg, #1d1d1d 60%, #1a1a1a 60%);
+  max-width: 50rem;
+  color: lightgray;
   margin: 4rem auto;
+  padding: 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.44);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.44);
+}
+
+h1 {
+  margin-bottom: 30px;
 }
 
 h4 {
   text-align: center;
+}
+
+.artist-img {
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+Label {
+  margin-top: 30px;
+}
+
+.artist-name {
+  font-size: 30px;
+  color: #1d1d1d;
+}
+
+/*-----------------------*/
+.counter {
+  display: flex;
+  width: 190px;
 }
