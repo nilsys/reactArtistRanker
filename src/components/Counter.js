@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 export const Counter = () => {
+
+  const [rating, setRating] = useState(0);
+
   return (
     <div>
       <div className="counter">
-      
-        <button className="counter-action decrement"> - </button>
+        <button className="counter-action decrement" onClick={() => setRating(prevRating => prevRating - 1)}> - </button>
         <div className="counter-score">
         <p>rating</p>
-        <strong>5 </strong>
+        <strong>{rating}</strong>
         </div>
-        <button className="counter-action increment"> + </button>
+        <button className="counter-action increment" onClick={() => setRating(prevRating => prevRating + 1)}> + </button>
       </div>
     </div>
   )
