@@ -43,18 +43,10 @@ export const GlobalProvider = ({ children }) => {
     })
   }
 
-  const changeRating = (index, delta) => {
-    dispatch({
-      type: 'CHANGE_RATING',
-      payload: artist
-    })
-  };
-
   return (
     <GlobalContext.Provider
       value={{
         artists: state.artists,
-        changeRating,
         removeArtist,
         addArtist,
         editArtist

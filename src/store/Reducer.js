@@ -18,10 +18,6 @@ export default (state, action) => {
         }
         return artist;
       });
-    case 'CHANGE_RATING':
-      const updateArtist = action.payload;
-      
-
     default:
       return state;
   }
