@@ -1,9 +1,17 @@
 import React, { createContext, useReducer } from 'react';
 import Reducer from './Reducer';
+import { v4 as uuid } from 'uuid';
 
 //initial state
 const initialState = {
-  artists: [],
+  artists: [
+    {
+      id: uuid(),
+      name: "Giolì & Assia",
+      picture: "https://i.ibb.co/xLvHHCZ/TEy-FOecd-400x400.jpg",
+      rating: 5
+    }
+  ],
 };
 
 // Create Context
@@ -35,10 +43,18 @@ export const GlobalProvider = ({ children }) => {
     })
   }
 
+  const changeRating = (index, delta) => {
+    dispatch({
+      type: 'CHANGE_RATING',
+      payload: artist
+    })
+  };
+
   return (
     <GlobalContext.Provider
       value={{
         artists: state.artists,
+        changeRating,
         removeArtist,
         addArtist,
         editArtist

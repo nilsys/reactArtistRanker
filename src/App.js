@@ -6,7 +6,6 @@ import { AddArtist } from './components/AddArtist';
 import { EditArtist } from './components/EditArtist';
 import { GlobalProvider } from './store/GlobalState';
 import NavbarLinks from './components/NavbarLinks';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

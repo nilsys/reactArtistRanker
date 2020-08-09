@@ -1,51 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../store/GlobalState';
 
-
-export const Counter = () => {
-
-  const [rating, setRating] = useState(0);
+export const Counter = ({index}) => {
+  const { artists, changeRating } = useContext(GlobalContext);
 
   return (
     <div>
       <div className="counter">
-        <button className="counter-action decrement" onClick={() => setRating(prevRating => prevRating - 1)}> - </button>
+        <button className="counter-action decrement" onClick={() => changeRating(index, -1)}> - </button>
         <div className="counter-score">
         <p>rating</p>
-        <strong>{rating}</strong>
+        <strong>{artists[index].rating}</strong>
         </div>
-        <button className="counter-action increment" onClick={() => setRating(prevRating => prevRating + 1)}> + </button>
+        <button className="counter-action increment" onClick={() => changeRating(index, 1)}> + </button>
       </div>
     </div>
   )
 }
-
-
-// class Counter extends Component {
-//   state = { 
-//     score: 0 
-//   };
-  
-//   incrementScore = () => {
-//     this.setState( prevState => ({
-//       score: prevState.score + 1
-//     }));
-//   }
-
-//   decrementScore = () => {
-//     this.setState( prevState => ({
-//       score: prevState.score - 1
-//     }));
-//   }
-
-//   render() {
-//     return (
-//       <div className="counter">
-//         <button className="counter-action decrement" onClick={this.decrementScore}> - </button>
-//         <span className="counter-score">{ this.state.score }</span>
-//         <button className="counter-action increment" onClick={this.incrementScore}> + </button>
-//       </div>
-//     );
-//   }
-// }
-
-export default Counter;

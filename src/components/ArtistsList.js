@@ -1,8 +1,8 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useContext } from 'react';
 import { GlobalContext } from '../store/GlobalState';
 import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem, Button } from 'reactstrap';
-import Counter from './Counter';
+import { Counter } from './Counter';
 
 export const ArtistsList = () => {
   const { artists, removeArtist } = useContext(GlobalContext);
@@ -21,7 +21,10 @@ export const ArtistsList = () => {
                   width="80"
                   height="auto"
                 ></img>
+                <div>
                 <strong className="artist-name">{artist.name}</strong>
+                <p>your rating: {artist.rating}</p>
+                </div>
                 <div className="ml-auto">
                 <Counter /> 
                   <Link

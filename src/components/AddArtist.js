@@ -10,7 +10,6 @@ export const AddArtist = () => {
   const [name, setName] = useState('');
   const [picture, setImg] = useState(''); //<<<
 
-
   const { addArtist } = useContext(GlobalContext);
   const history = useHistory();
 
